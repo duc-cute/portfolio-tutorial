@@ -1,5 +1,6 @@
 /** @format */
-import imgPort from "../../assets/images/perfil.png";
+// import imgPort from "../../assets/images/perfil.png";
+import imgPort from "../../assets/images/img.png";
 import { FiDribbble, FiGithub, FiLinkedin } from "react-icons/fi";
 import { HiChevronDoubleDown } from "react-icons/hi";
 import { TypeAnimation } from "react-type-animation";
@@ -81,7 +82,7 @@ const Home = () => {
                   129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                   -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
               />
-              <image className="w-[170px]" x="12" y="14" href={imgPort} />
+              <image className="w-[170px]" x="4" y="14" href={imgPort} />
             </g>
           </svg>
           <div />

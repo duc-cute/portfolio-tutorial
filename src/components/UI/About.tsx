@@ -60,10 +60,13 @@ const About = () => {
           </h3>
           <div className="text-[14px] text-smallTextColor leading-6 ">
             <p>
-              Hi, my name is <strong>Nguyen Duc</strong>. I am a web developer .
-              I am looking for an internship as a Web developer. I have worked
-              on several projects and have some technical skills needed to apply
-              for this position
+              Hi, my name is{" "}
+              <strong className="text-primaryColor font-[500]">
+                Nguyen Duc
+              </strong>
+              . I am a web developer . I am looking for an internship as a Web
+              developer. I have worked on several projects and have some
+              technical skills needed to apply for this position
               <br />I am currently studying in the 3rd year of East Asia
               University of Technology.
             </p>
