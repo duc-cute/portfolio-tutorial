@@ -11,7 +11,8 @@ export default {
       colors: {
         // primaryColor: "#fe7560",
         primaryColor: "#6e57e0",
-        headingColor: "#242329",
+        // headingColor: "#242329",
+        headingColor: "#081e21",
         smallTextColor: "#6d6a7c",
         primaryBg: "#fbfbfe",
       },

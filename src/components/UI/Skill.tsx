@@ -1,13 +1,12 @@
 /** @format */
 import { BsFillPatchCheckFill } from "react-icons/bs";
 /** @format */
-interface ITechnology {
-  title: string;
-  quality: string;
-}
 interface ISkill {
   position: string;
-  technology: ITechnology[];
+  technology: {
+    title: string;
+    quality: string;
+  }[];
 }
 const Skill = () => {
   const skill: ISkill[] = [
@@ -77,18 +76,18 @@ const Skill = () => {
   ];
 
   return (
-    <div className="pt-24 pb-8" id="skill">
+    <section className="pt-24 pb-8" id="skill">
       <h2 className="font-[700] text-[36px] text-headingColor text-center mb-2">
         Skill
       </h2>
       <p className="text-[14px] text-smallTextColor text-center mb-16">
-        My skill
+        My technical level
       </p>
       <div className="container grid grid-cols-2">
         {skill.map((item, index) => (
           <div
             key={index}
-            className="p-5 rounded-3xl border-solid border border-primaryColor w-[85%] mx-auto"
+            className="p-5 rounded-3xl border-solid border border-primaryColor w-[90%] mx-auto"
           >
             <div className=" pr-6 ">
               <h2 className="text-[18px] text-smallTextColor font-[600] text-center  mb-8">
@@ -120,7 +119,7 @@ const Skill = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

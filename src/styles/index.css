@@ -1,6 +1,6 @@
 /** @format */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -124,4 +124,8 @@ body {
 }
 .gradient-bg-section {
   background: linear-gradient(to top right, #ff5d8c, #fea209);
+}
+
+.shadow-custom {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.05);
 }
