@@ -15,6 +15,7 @@ export default {
         headingColor: "#081e21",
         smallTextColor: "#6d6a7c",
         primaryBg: "#fbfbfe",
+        inputColor: "#f0eefc",
       },
       height: {
         headerHeight: "4.8rem",

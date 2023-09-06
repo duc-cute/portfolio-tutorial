@@ -1,6 +1,7 @@
 /** @format */
 // import imgPort from "../../assets/images/perfil.png";
 import imgPort from "../../assets/images/img.png";
+
 import { FiDribbble, FiGithub, FiLinkedin } from "react-icons/fi";
 import { HiChevronDoubleDown } from "react-icons/hi";
 import { TypeAnimation } from "react-type-animation";
@@ -33,7 +34,7 @@ const Home = () => {
 
         {/* introduce */}
         <div className="">
-          <h1 className="text-headingColor text-[40px] font-[700]">
+          <h1 className="font-[Parisienne] text-headingColor text-[40px] font-[700]">
             Hi, I'm Nguyen Duc
           </h1>
           <div className="text-smallTextColor text-[20px] font-[600] mt-4 mb-6">

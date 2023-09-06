@@ -3,11 +3,12 @@
 // import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import About from "../components/UI/About";
-// import Contact from "../components/UI/Contact";
+import Contact from "../components/UI/Contact";
 import Skill from "../components/UI/Skill";
 
 import Home from "../components/UI/Home";
 import Project from "../components/UI/Project";
+import Footer from "../components/Footer/Footer";
 
 const Portfolio = () => {
   return (
@@ -18,9 +19,9 @@ const Portfolio = () => {
         <About />
         <Skill />
         <Project />
-        {/*<Contact /> */}
+        <Contact />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

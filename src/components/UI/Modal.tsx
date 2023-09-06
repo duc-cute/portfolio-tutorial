@@ -13,7 +13,7 @@ const Modal = ({ setShowModal, activeId }: IPropsModal) => {
   return (
     <div className="flex items-center justify-center w-full h-full fixed top-0 left-0 z-[10] bg-headingColor bg-opacity-40">
       <div className="bg-white max-w-[600px] rounded-2xl p-5 relative">
-        <div className="shadow-custom">
+        <div className="shadow-custom rounded-2xl">
           <figure>
             <img src={getImgUrl(portfolio?.image)} className="rounded-2xl" />
           </figure>

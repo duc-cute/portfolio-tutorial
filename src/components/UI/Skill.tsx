@@ -100,7 +100,7 @@ const Skill = () => {
                     className="flex gap-2  text-left justify-end "
                   >
                     <div className="flex gap-2 w-[80%]">
-                      <span>
+                      <span className="text-primaryColor">
                         <BsFillPatchCheckFill />
                       </span>
                       <div className="flex flex-col gap-2">
