@@ -1,11 +1,79 @@
 /** @format */
 import { BsMoonStars } from "react-icons/bs";
 import imgLogo from "../../assets/images/logo1.png";
+import { useEffect, useRef, useState } from "react";
+import _ from "lodash";
 const Header = () => {
   const listMenu: string[] = ["Home", "About", "Skill", "Project", "Contact"];
+  const [scrollPosition, setScrollPosition] = useState<boolean>(false);
+  const [activeMenu, setActiveMenu] = useState<string>("Home");
+  const sections = useRef<HTMLDivElement[]>([]);
+
+  const handleScroll = () => {
+    const sectionElements = document.querySelectorAll("[data-section]");
+    sections.current = Array.from(sectionElements) as HTMLDivElement[];
+    const pageYOffSet = window.pageYOffset;
+
+    if (sections && sections.current) {
+      sections.current.forEach((section) => {
+        const sectionOffSetTop = section.offsetTop - 50;
+        const sectionOffSetHeight = section.offsetHeight;
+
+        const sectionId = section.getAttribute("id");
+
+        if (
+          pageYOffSet > sectionOffSetTop &&
+          pageYOffSet <= sectionOffSetTop + sectionOffSetHeight &&
+          sectionId
+        ) {
+          setActiveMenu(sectionId);
+        }
+      });
+    }
+  };
+  const stickyHeaderFuc = () => {
+    if (window.scrollY >= 80) {
+      setScrollPosition(true);
+    } else {
+      setScrollPosition(false);
+    }
+  };
+
+  const handleScrollDebounced = _.debounce(handleScroll, 100);
+
+  useEffect(() => {
+    window.addEventListener("scroll", stickyHeaderFuc);
+    window.addEventListener("scroll", handleScrollDebounced);
+
+    return () => {
+      window.removeEventListener("scroll", stickyHeaderFuc);
+      window.removeEventListener("scroll", handleScrollDebounced);
+    };
+  }, [scrollPosition]);
+
+  useEffect(() => {
+    const { hash } = window.location;
+    if (hash) {
+      const tab = hash.replace("#", "");
+      setActiveMenu(tab);
+
+      const section = document.querySelector(`${hash}`);
+
+      setTimeout(() => {
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 1000);
+    }
+  }, []);
+
+  const handleActiveMenu = (item: string) => {
+    setActiveMenu(item);
+  };
+
   return (
-    <header>
-      <nav className="flex justify-between items-center container font-[Poppins] h-headerHeight">
+    <header className={`${scrollPosition ? "sticky__header" : ""} z-20`}>
+      <nav className="flex justify-between items-center container !max-w-[1170px] font-[Poppins] h-headerHeight">
         {/* logo */}
         <div className="flex items-center gap-3">
           <div className=" h-headerHeight ">
@@ -23,9 +91,12 @@ const Header = () => {
               return (
                 <li
                   key={index}
-                  className="text-headingColor text-[14px] font-[500]"
+                  className={` text-headingColor text-[14px] font-[500] ${
+                    item === activeMenu ? "text-primaryColor" : ""
+                  }`}
+                  onClick={() => handleActiveMenu(item)}
                 >
-                  <a href="#home">{item}</a>
+                  <a href={`#${item}`}>{item}</a>
                 </li>
               );
             })}

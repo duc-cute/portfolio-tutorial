@@ -13,7 +13,7 @@ const Project = () => {
     return new URL(`${name}`, import.meta.url).href;
   };
   return (
-    <section className="pt-24 pb-8">
+    <section data-section className="pt-24 pb-8" id="Project">
       <h2 className="font-[700] text-[36px] text-headingColor text-center mb-2">
         Project
       </h2>

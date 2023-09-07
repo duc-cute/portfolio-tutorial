@@ -19,7 +19,7 @@ const About = () => {
     }
   }, []);
   return (
-    <section className="pt-24 pb-8" id="about">
+    <section data-section className="pt-24 pb-8" id="About">
       <h2 className="font-[700] text-[36px] text-headingColor text-center mb-2">
         About Me
       </h2>

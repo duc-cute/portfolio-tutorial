@@ -76,7 +76,7 @@ const Skill = () => {
   ];
 
   return (
-    <section className="pt-24 pb-8" id="skill">
+    <section data-section className="pt-24 pb-8" id="Skill">
       <h2 className="font-[700] text-[36px] text-headingColor text-center mb-2">
         Skill
       </h2>

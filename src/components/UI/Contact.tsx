@@ -20,7 +20,7 @@ const Contact = () => {
     }
   };
   return (
-    <section className="pt-24 pb-8" id="contact">
+    <section data-section className="pt-24 pb-8" id="Contact">
       <h2 className="font-[700] text-[36px] text-headingColor text-center mb-2">
         Contact Me
       </h2>

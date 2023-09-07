@@ -18,7 +18,7 @@ export default {
         inputColor: "#f0eefc",
       },
       height: {
-        headerHeight: "4.8rem",
+        headerHeight: "80px",
       },
       animation: {
         bounce: "bounce 2s infinite",
