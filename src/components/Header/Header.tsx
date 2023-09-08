@@ -21,6 +21,9 @@ const Header = () => {
 
         const sectionId = section.getAttribute("id");
 
+        if (pageYOffSet == 0) {
+          setActiveMenu("Home");
+        }
         if (
           pageYOffSet > sectionOffSetTop &&
           pageYOffSet <= sectionOffSetTop + sectionOffSetHeight &&
@@ -31,6 +34,7 @@ const Header = () => {
       });
     }
   };
+
   const stickyHeaderFuc = () => {
     if (window.scrollY >= 80) {
       setScrollPosition(true);
@@ -38,10 +42,11 @@ const Header = () => {
       setScrollPosition(false);
     }
   };
-
   const handleScrollDebounced = _.debounce(handleScroll, 100);
 
   useEffect(() => {
+    console.log("rêpaet");
+
     window.addEventListener("scroll", stickyHeaderFuc);
     window.addEventListener("scroll", handleScrollDebounced);
 
@@ -49,7 +54,7 @@ const Header = () => {
       window.removeEventListener("scroll", stickyHeaderFuc);
       window.removeEventListener("scroll", handleScrollDebounced);
     };
-  }, [scrollPosition]);
+  }, [scrollPosition, activeMenu]);
 
   useEffect(() => {
     const { hash } = window.location;
@@ -72,16 +77,24 @@ const Header = () => {
   };
 
   return (
-    <header className={`${scrollPosition ? "sticky__header" : ""} z-20`}>
+    <header
+      className={`dark:bg-primaryDarkColor ${
+        scrollPosition ? "sticky__header" : ""
+      } z-20`}
+    >
       <nav className="flex justify-between items-center container !max-w-[1170px] font-[Poppins] h-headerHeight">
         {/* logo */}
         <div className="flex items-center gap-3">
           <div className=" h-headerHeight ">
             <img className="w-full h-full" src={imgLogo} />
           </div>
-          <div className="flex flex-col gap-1">
-            <h2 className="text-[16px] text-headingColor ">DucCute</h2>
-            <p className="text-[12px] text-smallTextColor">personal</p>
+          <div className="flex flex-col gap-1 ">
+            <h2 className="text-[16px] text-headingColor dark:text-headingDarkColor">
+              DucCute
+            </h2>
+            <p className="text-[12px] text-smallTextColor dark:text-smallTextDarkColor">
+              personal
+            </p>
           </div>
         </div>
         {/* menu */}
@@ -91,8 +104,8 @@ const Header = () => {
               return (
                 <li
                   key={index}
-                  className={` text-headingColor text-[14px] font-[500] ${
-                    item === activeMenu ? "text-primaryColor" : ""
+                  className={` text-headingColor text-[14px] font-[500] dark:text-headingDarkColor hover:!text-primaryColor ${
+                    item === activeMenu ? "!text-primaryColor" : ""
                   }`}
                   onClick={() => handleActiveMenu(item)}
                 >

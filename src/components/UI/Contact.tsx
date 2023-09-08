@@ -20,11 +20,15 @@ const Contact = () => {
     }
   };
   return (
-    <section data-section className="pt-24 pb-8" id="Contact">
-      <h2 className="font-[700] text-[36px] text-headingColor text-center mb-2">
+    <section
+      data-section
+      className="pt-24 pb-16 dark:bg-primaryDarkColor"
+      id="Contact"
+    >
+      <h2 className="font-[700] text-[36px] text-headingColor dark:text-headingDarkColor text-center mb-2">
         Contact Me
       </h2>
-      <p className="text-[14px] text-smallTextColor text-center mb-16">
+      <p className="text-[14px] text-smallTextColor dark:text-smallTextDarkColor text-center mb-16">
         Get in Touch
       </p>
       <div className="container  grid grid-cols-[3fr,5fr] justify-center">
@@ -33,10 +37,10 @@ const Contact = () => {
             <i className="uil uil-phone text-primaryColor text-[36px]"></i>
 
             <div className="flex flex-col gap-2">
-              <h3 className="text-[20px] text-headingColor font-[500]">
+              <h3 className="text-[20px] text-headingColor dark:text-headingDarkColor font-[500]">
                 Call Me
               </h3>
-              <span className="text-[16px] text-smallTextColor">
+              <span className="text-[16px] text-smallTextColor dark:text-smallTextDarkColor">
                 0888-804-085
               </span>
             </div>
@@ -45,10 +49,10 @@ const Contact = () => {
           <div className="flex gap-2">
             <i className="uil uil-envelope text-primaryColor text-[36px]"></i>
             <div className="flex flex-col gap-2">
-              <h3 className="text-[20px] text-headingColor font-[500]">
+              <h3 className="text-[20px] text-headingColor dark:text-headingDarkColor font-[500]">
                 Email
               </h3>
-              <span className="text-[16px] text-smallTextColor">
+              <span className="text-[16px] text-smallTextColor dark:text-smallTextDarkColor">
                 ducnguyen150120035555@email.com
               </span>
             </div>
@@ -58,10 +62,12 @@ const Contact = () => {
             <i className="uil uil-map-marker text-primaryColor text-[36px]"></i>
 
             <div className="flex flex-col gap-2">
-              <h3 className="text-[20px] text-headingColor font-[500]">
+              <h3 className="text-[20px] text-headingColor dark:text-headingDarkColor font-[500]">
                 Location
               </h3>
-              <span className="text-[16px] text-smallTextColor">Ha Noi</span>
+              <span className="text-[16px] text-smallTextColor dark:text-smallTextDarkColor">
+                Ha Noi
+              </span>
             </div>
           </div>
         </div>
@@ -76,12 +82,15 @@ const Contact = () => {
           <div className="grid grid-cols-2 gap-6">
             <div className="">
               <div className="flex flex-col gap-2 p-4 bg-inputColor rounded-xl">
-                <label htmlFor="name" className="text-[14px] text-headingColor">
+                <label
+                  htmlFor="name"
+                  className="text-[14px] text-headingColor "
+                >
                   Name
                 </label>
                 <input
                   type="text"
-                  className="bg-transparent border-none outline-none text-smallTextColor"
+                  className="bg-transparent border-none outline-none text-smallTextColor "
                   {...register("name", { required: true, maxLength: 100 })}
                 />
               </div>
@@ -96,13 +105,13 @@ const Contact = () => {
               <div className="flex flex-col gap-2 p-4 bg-inputColor rounded-lg">
                 <label
                   htmlFor="email"
-                  className="text-[14px] text-headingColor"
+                  className="text-[14px] text-headingColor "
                 >
                   Email
                 </label>
                 <input
                   type="email"
-                  className="bg-transparent border-none outline-none text-smallTextColor"
+                  className="bg-transparent border-none outline-none text-smallTextColor dark:text-smallTextDarkColor"
                   {...register("email", {
                     required: true,
                     pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,

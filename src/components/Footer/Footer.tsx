@@ -5,15 +5,19 @@ const Footer = () => {
   const listMenu: string[] = ["Home", "About", "Skill", "Project", "Contact"];
 
   return (
-    <div className="flex flex-col items-center mt-16 pt-12 pb-6 bg-primaryColor bg-opacity-10">
+    <div className="flex flex-col items-center dark:bg-[#100e1b] pt-12 pb-6 bg-primaryColor bg-opacity-10">
       <nav className="flex justify-between items-center container font-[Poppins] pb-8">
         <div className="flex items-center gap-3">
-          <div className="max-w-[200px]">
+          <a href="#Home" className="max-w-[200px]">
             <img className="w-full" src={imgLogo} />
-          </div>
+          </a>
           <div className="flex flex-col gap-1">
-            <h2 className="text-[16px] text-headingColor">DucCute</h2>
-            <p className="text-[12px] text-smallTextColor">personal</p>
+            <h2 className="text-[16px] text-headingColor dark:text-headingDarkColor">
+              DucCute
+            </h2>
+            <p className="text-[12px] text-smallTextColor dark:text-smallTextDarkColor">
+              personal
+            </p>
           </div>
         </div>
         <div className="flex gap-8 items-center">
@@ -22,9 +26,9 @@ const Footer = () => {
               return (
                 <li
                   key={index}
-                  className="text-headingColor text-[14px] font-[500]"
+                  className="text-headingColor dark:text-headingDarkColor text-[14px] font-[500]"
                 >
-                  <a href="#home">{item}</a>
+                  <a href={`#${item}`}>{item}</a>
                 </li>
               );
             })}
@@ -58,8 +62,8 @@ const Footer = () => {
           </a>
         </div>
       </nav>
-      <div className=" container h-[2px] bg-headingColor w-[100%] !ml-[20px]  !mr-[20px]"></div>
-      <div className="font-[Parisienne] text-[16px] mt-8">
+      <div className=" container h-[2px] bg-headingColor dark:bg-headingDarkColor w-[100%] !ml-[20px]  !mr-[20px]"></div>
+      <div className="font-[Parisienne] text-[16px] mt-8 dark:text-smallTextDarkColor">
         Developed by Nguyen Duc&copy; 2023 All rights reserved.
       </div>
     </div>

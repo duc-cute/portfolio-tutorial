@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <section
       data-section
-      className="pt-24 pb-8 flex flex-col items-center"
+      className="pt-24 pb-8 flex flex-col items-center dark:bg-primaryDarkColor"
       id="Home"
     >
       <div className="container grid items-center grid-cols-[.25fr,1.15fr,1.15fr,max-content]">
@@ -52,14 +52,14 @@ const Home = () => {
         {/* introduce */}
         <div className="">
           <h1
-            className="font-[Parisienne] text-headingColor text-[40px] font-[700]"
+            className="font-[Parisienne] text-headingColor text-[40px] font-[700] dark:text-headingDarkColor"
             data-aos="fade-right"
             data-aos-duration="1500"
           >
             Hi, I'm Nguyen
           </h1>
           <div
-            className="text-smallTextColor text-[20px] font-[600] mt-4 mb-6"
+            className="text-smallTextColor text-[20px] font-[600] mt-4 mb-6 dark:text-smallTextDarkColor"
             data-aos="fade-up"
             data-aos-duration="800"
             data-aos-delay="200"
@@ -74,7 +74,7 @@ const Home = () => {
             />
           </div>
           <p
-            className="text-smallTextColor text-[16px] leading-6 mb-5 max-w-[340px]"
+            className="text-smallTextColor text-[16px] leading-6 mb-5 max-w-[340px] dark:text-smallTextDarkColor"
             data-aos="fade-left"
             data-aos-duration="1500"
           >
@@ -123,35 +123,35 @@ const Home = () => {
 
         <div className="flex flex-col items-center gap-12 text-end">
           <div className="flex flex-col gap-2 w-full text-end">
-            <h2 className="text-[32px] font-[600] text-headingColor ">
+            <h2 className="text-[32px] font-[600] text-headingColor dark:text-headingDarkColor">
               <CountUp start={0} end={6} duration={2} suffix="+" />
             </h2>
-            <h3 className="text-[18px] font-[500] text-headingColor">
+            <h3 className="text-[18px] font-[500] text-headingColor dark:text-headingDarkColor">
               Months of Experience
             </h3>
           </div>
 
           <div className="flex flex-col gap-2 w-full text-end">
-            <h2 className="text-[32px] font-[600] text-headingColor ">
+            <h2 className="text-[32px] font-[600] text-headingColor dark:text-headingDarkColor">
               <CountUp start={0} end={600} duration={2} suffix="+" />
             </h2>
-            <h3 className="text-[18px] font-[500] text-headingColor">
+            <h3 className="text-[18px] font-[500] text-headingColor dark:text-headingDarkColor">
               Level English
             </h3>
           </div>
           <div className="flex flex-col gap-2 text-end w-full">
-            <h2 className="text-[32px] font-[600] text-headingColor ">
+            <h2 className="text-[32px] font-[600] text-headingColor dark:text-headingDarkColor">
               <CountUp start={0} end={100} duration={2} suffix="%" />
             </h2>
-            <h3 className="text-[18px] font-[500] text-headingColor">
+            <h3 className="text-[18px] font-[500] text-headingColor dark:text-headingDarkColor">
               Success Rate
             </h3>
           </div>
           <div className="flex flex-col gap-2 w-full text-end">
-            <h2 className="text-[32px] font-[600] text-headingColor ">
+            <h2 className="text-[32px] font-[600] text-headingColor dark:text-headingDarkColor">
               <CountUp start={0} end={12} duration={2} suffix="+" />
             </h2>
-            <h3 className="text-[18px] font-[500] text-headingColor">
+            <h3 className="text-[18px] font-[500] text-headingColor dark:text-headingDarkColor">
               Project Completed
             </h3>
           </div>

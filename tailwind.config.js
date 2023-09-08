@@ -11,11 +11,13 @@ export default {
       colors: {
         // primaryColor: "#fe7560",
         primaryColor: "#6e57e0",
-        // headingColor: "#242329",
         headingColor: "#081e21",
         smallTextColor: "#6d6a7c",
         primaryBg: "#fbfbfe",
         inputColor: "#f0eefc",
+        primaryDarkColor: "#191627",
+        headingDarkColor: "#f2f1f3",
+        smallTextDarkColor: "#bcbac4",
       },
       height: {
         headerHeight: "80px",

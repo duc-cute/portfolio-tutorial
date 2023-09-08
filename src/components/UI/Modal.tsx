@@ -11,27 +11,29 @@ const Modal = ({ setShowModal, activeId }: IPropsModal) => {
     return new URL(`${name}`, import.meta.url).href;
   };
   return (
-    <div className="flex items-center justify-center w-full h-full fixed top-0 left-0 z-[10] bg-headingColor bg-opacity-40">
-      <div className="bg-white max-w-[600px] rounded-2xl p-5 relative">
+    <div className="flex items-center justify-center w-full h-full fixed top-0 left-0 z-[50] bg-headingColor  bg-opacity-40">
+      <div className="bg-white dark:bg-headingColor max-w-[600px] rounded-2xl p-5 relative">
         <div className="shadow-custom rounded-2xl">
           <figure>
             <img src={getImgUrl(portfolio?.image)} className="rounded-2xl" />
           </figure>
         </div>
         <div className="">
-          <h2 className="text-[24px] text-headingColor font-[600] mt-4 mb-6 ">
+          <h2 className="text-[24px] text-headingColor dark:text-headingDarkColor font-[600] mt-4 mb-6 ">
             {portfolio?.title}
           </h2>
-          <p className="text-[14px] text-smallTextColor leading-7 font-[Montserrat]">
+          <p className="text-[14px] text-smallTextColor dark:text-smallTextDarkColor leading-7 font-[Montserrat]">
             {portfolio?.detail.description}
           </p>
           <div className="flex mt-5 items-center gap-2">
-            <h3 className="text-[18px] text-headingColor">Technologies:</h3>
+            <h3 className="text-[18px] text-headingColor dark:text-headingDarkColor">
+              Technologies:
+            </h3>
             <ul className="flex gap-3">
               {portfolio?.detail.technology.split(",").map((item, index) => (
                 <li
                   key={`tech-${index}`}
-                  className="p-2 text-[12px] bg-gray-200 rounded-md text-headingColor"
+                  className="p-2 text-[12px] bg-gray-200 rounded-md text-headingColor "
                 >
                   {item}
                 </li>
