@@ -1,13 +1,26 @@
 /** @format */
 import { BsMoonStars } from "react-icons/bs";
+import { FiSun } from "react-icons/fi";
+
 import imgLogo from "../../assets/images/logo1.png";
 import { useEffect, useRef, useState } from "react";
 import _ from "lodash";
+import useLocalStorage from "../../hooks/useLocalStorage";
+
 const Header = () => {
   const listMenu: string[] = ["Home", "About", "Skill", "Project", "Contact"];
   const [scrollPosition, setScrollPosition] = useState<boolean>(false);
   const [activeMenu, setActiveMenu] = useState<string>("Home");
   const sections = useRef<HTMLDivElement[]>([]);
+  const htmlRef = useRef<HTMLElement>(document.documentElement);
+  const { darkMode, setDarkMode } = useLocalStorage(false);
+
+  const handleDarkMode = () => {
+    setDarkMode(!darkMode);
+    const htmlElement = htmlRef.current;
+
+    htmlElement.setAttribute("data-mode", `${darkMode ? "dark" : "light"}`);
+  };
 
   const handleScroll = () => {
     const sectionElements = document.querySelectorAll("[data-section]");
@@ -98,7 +111,7 @@ const Header = () => {
           </div>
         </div>
         {/* menu */}
-        <div className="flex gap-8 items-center">
+        <div className="flex gap-6 items-center">
           <ul className="flex gap-6">
             {listMenu.map((item, index) => {
               return (
@@ -114,8 +127,16 @@ const Header = () => {
               );
             })}
           </ul>
-          <div>
-            <BsMoonStars />
+          <div onClick={handleDarkMode}>
+            {darkMode ? (
+              <span className="text-headingColor text-[18px] hover:text-primaryColor">
+                <BsMoonStars />
+              </span>
+            ) : (
+              <span className="text-white text-[18px] hover:text-primaryColor">
+                <FiSun />
+              </span>
+            )}
           </div>
         </div>
       </nav>

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Portfolio from "./screens/Portfolio";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
 /** @format */
 function App() {
   useEffect(() => {
