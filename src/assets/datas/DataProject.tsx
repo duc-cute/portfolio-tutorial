@@ -1,5 +1,9 @@
 /** @format */
-
+import img1 from "../../assets/images/img1.png";
+import img2 from "../../assets/images/img2.png";
+import img3 from "../../assets/images/img3.png";
+import img4 from "../../assets/images/img4.png";
+import img5 from "../../assets/images/img5.png";
 export interface IDataProject {
   id: number;
   image: string;
@@ -16,7 +20,7 @@ export interface IDataProject {
 export const dataProject: IDataProject[] = [
   {
     id: 1,
-    image: "../../assets/images/img5.png",
+    image: img5,
     title: "Ecommerce Book",
     detail: {
       description: "Xây dụng website thương mại điện tử clone Tiki",
@@ -29,7 +33,7 @@ export const dataProject: IDataProject[] = [
   },
   {
     id: 2,
-    image: "../../assets/images/img2.png",
+    image: img2,
     title: "Portfolio",
     detail: {
       description: "Xây dụng website Portfolio giới thiệu về bản thân",
@@ -42,7 +46,7 @@ export const dataProject: IDataProject[] = [
   },
   {
     id: 3,
-    image: "../../assets/images/img3.png",
+    image: img3,
     title: "Weather App",
     detail: {
       description:
@@ -56,7 +60,7 @@ export const dataProject: IDataProject[] = [
   },
   {
     id: 4,
-    image: "../../assets/images/img4.png",
+    image: img4,
     title: "Technology Devices",
     detail: {
       description:
@@ -70,7 +74,7 @@ export const dataProject: IDataProject[] = [
   },
   {
     id: 5,
-    image: "../../assets/images/img1.png",
+    image: img1,
     title: "Music Player App",
     detail: {
       description: "Xây dụng web app nghe nhạc",
@@ -83,7 +87,7 @@ export const dataProject: IDataProject[] = [
   },
   {
     id: 6,
-    image: "../../assets/images/img3.png",
+    image: img3,
     title: "Weather App",
     detail: {
       description:
@@ -97,7 +101,7 @@ export const dataProject: IDataProject[] = [
   },
   {
     id: 7,
-    image: "../../assets/images/img4.png",
+    image: img4,
     title: "Technology Devices",
     detail: {
       description:
@@ -111,7 +115,7 @@ export const dataProject: IDataProject[] = [
   },
   {
     id: 8,
-    image: "../../assets/images/img1.png",
+    image: img1,
     title: "Music Player App",
     detail: {
       description: "Xây dụng web app nghe nhạc",

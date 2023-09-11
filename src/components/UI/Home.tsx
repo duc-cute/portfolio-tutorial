@@ -83,7 +83,7 @@ const Home = () => {
           </p>
           <div className="order-3  flex items-center justify-start md:order-4 md:block">
             <a
-              className="p-3 text-[14px]  md:px-5 bg-primaryColor text-white font-[500] rounded-[32px]  gap-2 inline-flex items-center md:mt-4 md:text-[16px] md:py-4"
+              className="px-5 py-4 text-[16px]  bg-primaryColor text-white font-[500] rounded-[32px]  gap-2 inline-flex items-center md:mt-4 "
               href="#"
               data-aos="fade-up-right"
               data-aos-duration="1500"
