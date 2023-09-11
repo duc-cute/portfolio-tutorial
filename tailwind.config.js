@@ -26,6 +26,8 @@ export default {
       animation: {
         bounce: "bounce 2s infinite",
         "bounce-webkit": "bounce 2s infinite",
+        slideFromRight: "slideFromRight 0.3s forwards",
+        "slideFromRight-webkit": "slideFromRight 0.3 forwards",
       },
       // fontSize: {
 

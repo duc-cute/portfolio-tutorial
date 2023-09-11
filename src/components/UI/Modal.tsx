@@ -6,7 +6,6 @@ interface IPropsModal {
 }
 const Modal = ({ setShowModal, activeId }: IPropsModal) => {
   const portfolio = dataProject.find((item) => item.id === activeId);
-  console.log(">>> portfolio", portfolio);
   const getImgUrl = (name: string | undefined): string => {
     return new URL(`${name}`, import.meta.url).href;
   };
@@ -33,7 +32,7 @@ const Modal = ({ setShowModal, activeId }: IPropsModal) => {
               {portfolio?.detail.technology.split(",").map((item, index) => (
                 <li
                   key={`tech-${index}`}
-                  className="p-2 text-[12px] bg-gray-200 rounded-md text-headingColor "
+                  className="flex items-center text-center p-2 text-[12px] bg-gray-200 rounded-md text-headingColor "
                 >
                   {item}
                 </li>
