@@ -15,7 +15,7 @@ const Project = () => {
   return (
     <section
       data-section
-      className="pt-24 pb-8 dark:bg-primaryDarkColor"
+      className="pt-16 md:pt-24 pb-8 dark:bg-primaryDarkColor"
       id="Project"
     >
       <h2 className="font-[700] text-[36px] text-headingColor dark:text-headingDarkColor text-center mb-2">
@@ -25,7 +25,7 @@ const Project = () => {
         My recent project
       </p>
       <div className="container flex flex-col items-center">
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {dataProject.slice(0, nextItems).map((item, index) => (
             <div
               key={`project-${index}`}

@@ -18,6 +18,7 @@ export default {
         primaryDarkColor: "#191627",
         headingDarkColor: "#f2f1f3",
         smallTextDarkColor: "#bcbac4",
+        inputDarkColor: "#211d35",
       },
       height: {
         headerHeight: "80px",

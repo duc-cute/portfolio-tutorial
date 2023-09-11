@@ -6,9 +6,9 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col items-center dark:bg-[#100e1b] pt-12 pb-6 bg-primaryColor bg-opacity-10">
-      <nav className="flex justify-between items-center container font-[Poppins] pb-8">
+      <nav className="flex flex-col gap-12 justify-start md:flex-row md:justify-between md:items-center container font-[Poppins] pb-8">
         <div className="flex items-center gap-3">
-          <a href="#Home" className="max-w-[200px]">
+          <a href="#Home" className="max-w-[160px] md:max-w-[200px]">
             <img className="w-full" src={imgLogo} />
           </a>
           <div className="flex flex-col gap-1">
@@ -21,12 +21,12 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex gap-8 items-center">
-          <ul className="flex gap-6">
+          <ul className="flex flex-col md:flex-row gap-6">
             {listMenu.map((item, index) => {
               return (
                 <li
                   key={index}
-                  className="text-headingColor dark:text-headingDarkColor text-[14px] font-[500]"
+                  className="text-headingColor dark:text-headingDarkColor text-[20px] font-[500] md:text-[14px]"
                 >
                   <a href={`#${item}`}>{item}</a>
                 </li>

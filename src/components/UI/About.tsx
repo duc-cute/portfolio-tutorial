@@ -21,7 +21,7 @@ const About = () => {
   return (
     <section
       data-section
-      className="pt-24 pb-8 dark:bg-primaryDarkColor"
+      className="pt-16 md:pt-24 pb-8 dark:bg-primaryDarkColor"
       id="About"
     >
       <h2 className="font-[700] text-[36px] text-headingColor text-center mb-2 dark:text-headingDarkColor">
@@ -31,7 +31,7 @@ const About = () => {
         My introduction
       </p>
       <div className="container flex  ">
-        <div className="w-[35%] h-auto">
+        <div className="hidden w-[35%] h-auto md:block">
           <div
             className="about_image_wrap parallax relative"
             data-relative-input="true"
@@ -51,8 +51,8 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="w-[65%] pl-20">
-          <h3 className="text-headingColor text-[24px] mb-4 dark:text-headingDarkColor">
+        <div className="md:w-[65%] md:pl-20">
+          <h3 className="text-headingColor h-16  leading-8 text-[24px] mb-4 dark:text-headingDarkColor">
             I'm Nguyen Duc and &nbsp;
             <TypeAnimation
               sequence={["Web Developer", 2000, "Student", 2000]}
@@ -76,7 +76,7 @@ const About = () => {
             </p>
           </div>
           <div className="mt-6 mb-10">
-            <ul className="grid grid-cols-2 gap-5">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <li className="flex items-center">
                 <span className="flex gap-4 items-center text-smallTextColor dark:text-smallTextDarkColor">
                   <label className="font-[700] text-[14px] text-headingColor min-w-[85px] inline-flex items-center dark:text-headingDarkColor">
@@ -86,8 +86,8 @@ const About = () => {
                 </span>
               </li>
               <li className="flex items-center">
-                <span className="flex gap-4 items-center text-smallTextColor dark:text-smallTextDarkColor">
-                  <label className="font-[700] text-[14px] text-headingColor min-w-[85px] inline-flex items-center dark:text-headingDarkColor">
+                <span className="flex gap-4 items-center leading-5 text-smallTextColor dark:text-smallTextDarkColor">
+                  <label className=" font-[700] text-[14px] text-headingColor min-w-[85px] inline-flex items-center dark:text-headingDarkColor">
                     Study:
                   </label>
                   East Asia University of Technology
@@ -129,7 +129,7 @@ const About = () => {
                 </span>
               </li>
               <li className="flex items-center">
-                <span className="flex gap-4 items-center">
+                <span className="leading-5 flex gap-4 items-center">
                   <label className="font-[700] text-[14px] min-w-[85px] inline-flex items-center dark:text-headingDarkColor">
                     Github:
                   </label>

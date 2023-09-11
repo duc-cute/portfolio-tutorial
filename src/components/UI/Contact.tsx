@@ -22,7 +22,7 @@ const Contact = () => {
   return (
     <section
       data-section
-      className="pt-24 pb-16 dark:bg-primaryDarkColor"
+      className="pt-16 md:pt-24 pb-16 dark:bg-primaryDarkColor"
       id="Contact"
     >
       <h2 className="font-[700] text-[36px] text-headingColor dark:text-headingDarkColor text-center mb-2">
@@ -31,7 +31,7 @@ const Contact = () => {
       <p className="text-[14px] text-smallTextColor dark:text-smallTextDarkColor text-center mb-16">
         Get in Touch
       </p>
-      <div className="container  grid grid-cols-[3fr,5fr] justify-center">
+      <div className="container  grid grid-cols-1 gap-12 md:gap-2 md:grid-cols-[3fr,5fr] justify-center">
         <div className="flex flex-col gap-10">
           <div className="flex gap-2">
             <i className="uil uil-phone text-primaryColor text-[36px]"></i>
@@ -79,18 +79,18 @@ const Contact = () => {
           method="POST"
           className="grid"
         >
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="">
-              <div className="flex flex-col gap-2 p-4 bg-inputColor rounded-xl">
+              <div className="flex flex-col gap-2 p-4 bg-inputColor dark:bg-inputDarkColor rounded-xl">
                 <label
                   htmlFor="name"
-                  className="text-[14px] text-headingColor "
+                  className="text-[14px] text-headingColor dark:text-headingDarkColor"
                 >
                   Name
                 </label>
                 <input
                   type="text"
-                  className="bg-transparent border-none outline-none text-smallTextColor "
+                  className="bg-transparent  border-none outline-none text-smallTextColor dark:text-headingDarkColor"
                   {...register("name", { required: true, maxLength: 100 })}
                 />
               </div>
@@ -102,16 +102,16 @@ const Contact = () => {
               )}
             </div>
             <div>
-              <div className="flex flex-col gap-2 p-4 bg-inputColor rounded-lg">
+              <div className="flex flex-col gap-2 p-4 bg-inputColor dark:bg-inputDarkColor rounded-lg">
                 <label
                   htmlFor="email"
-                  className="text-[14px] text-headingColor "
+                  className="text-[14px] text-headingColor dark:text-headingDarkColor"
                 >
                   Email
                 </label>
                 <input
                   type="email"
-                  className="bg-transparent border-none outline-none text-smallTextColor dark:text-smallTextDarkColor"
+                  className="bg-transparent border-none outline-none text-smallTextColor  dark:text-smallTextDarkColor"
                   {...register("email", {
                     required: true,
                     pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -128,8 +128,8 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="">
-            <div className="p-4 flex flex-col gap-4 bg-inputColor rounded-xl mt-6">
+          <div>
+            <div className="p-4 flex flex-col gap-4 bg-inputColor dark:bg-inputDarkColor dark:text-headingDarkColor rounded-xl mt-6">
               <label htmlFor="message" className="text-[14px]">
                 Message
               </label>
