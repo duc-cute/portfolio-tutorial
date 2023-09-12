@@ -138,7 +138,7 @@ const Header = ({ darkMode, setDarkMode }: IDarkMode) => {
             }  md:flex gap-6 md:items-center md:justify-end md:relative md:bg-transparent   fixed w-full h-full top-0 left-0  bg-[#00000084] z-[1000] `}
             onClick={() => setShowMenuMobile(false)}
           >
-            <ul className="absolute animate-slideFromRight  top-0 right-0 bg-primaryBg w-[60%] h-full flex flex-col justify-center items-start px-5 ml-5   gap-10 md:relative md:bg-transparent md:flex-row md:items-center">
+            <ul className="absolute animate-slideFromRight  top-0 right-0 bg-primaryBg w-[60%] h-full flex flex-col justify-center md:justify-end items-start px-5 ml-5   gap-10 md:relative md:bg-transparent md:flex-row md:items-center">
               {listMenu.map((item, index) => {
                 return (
                   <li
