@@ -112,7 +112,7 @@ const Header = ({ darkMode, setDarkMode }: IDarkMode) => {
           scrollPosition ? "sticky__header" : ""
         } z-20`}
       >
-        <nav className="flex justify-between items-center container !max-w-[1170px] font-[Poppins] h-headerHeight">
+        <nav className="flex justify-between items-center container !max-w-[1170px] font-[Poppins] h-[64px] md:h-headerHeight">
           {/* logo */}
           <div className="flex items-center gap-3">
             <div className="h-headerHeight hidden  md:flex items-center">
